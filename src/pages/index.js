@@ -39,7 +39,7 @@ const IndexPage = () => {
         </span>
       </h1>
       <p style={paragraphStyles}>
-        See my github <code style={codeStyles}>@kajoj2</code> to see my work in real time .{" "}
+        See my github <code style={codeStyles}>@kajoj2</code> to see my work in real time.
         <span role="img" aria-label="Sunglasses smiley emoji">
           😎
         </span>
