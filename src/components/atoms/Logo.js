@@ -1,10 +1,12 @@
+import React from 'react'
 import styled from 'styled-components'
 
-export const Logo = styled.button`
+const LogoStyle = styled.p`
   background: transparent;
-  border-radius: 3px;
-  border: 2px solid palevioletred;
-  color: palevioletred;
-  margin: 0 1em;
-  padding: 0.25em 1em;
+  padding: 10px;
+  font-weight: 900;
+  font-size: 1.5rem;
+  color: black;
 `
+
+export const Logo = () => <LogoStyle>FURWERS</LogoStyle>

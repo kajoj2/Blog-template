@@ -7,6 +7,6 @@ export default {
     component: Logo
 };
 
-const Template = () => <Logo>TEST </Logo>;
+const Template = () => <Logo/>;
 
 export const LogoExample = Template.bind({});
