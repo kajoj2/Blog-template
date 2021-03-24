@@ -1,4 +1,6 @@
 import {action} from "@storybook/addon-actions"
+import GlobalStyle from "../src/Layout/globalStyle";
+import React from "react";
 
 // Gatsby's Link overrides:
 // Gatsby Link calls the `enqueue` & `hovering` methods on the global variable ___loader.
@@ -23,3 +25,11 @@ window.___navigate = pathname => {
 export const parameters = {
     actions: {argTypesRegex: "^on[A-Z].*"},
 }
+export const decorators = [
+    (Story) => (
+        <>
+        <GlobalStyle/>
+        <Story />
+        </>
+    ),
+];
