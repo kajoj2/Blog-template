@@ -5,18 +5,23 @@ import NavBarLink from "../../atoms/NavBarLink/NavBarLink";
 
 const BarWrapper = styled.div`
   height: 70px;
-  display: flex;
+  width: 100%;
   //background: rebeccapurple;
+  display: inline-grid;
+  grid-template-columns: 1fr 1fr 1fr;
   justify-content: space-between;
+  column-gap: 20px;
   margin: auto;
   padding: 0 10px;
+  justify-items: stretch;
 `
 const LogoWrapper = styled.div`
   margin: auto 0;
+ 
 `
 const LinkWrapper = styled.div`
   margin: auto 0;
-  padding-right: 10px;
+  justify-self: end;
 
 `
 
@@ -26,6 +31,9 @@ const NavBar = () => (
     <LogoWrapper>
         <Logo/>
     </LogoWrapper>
+    <div>
+
+    </div>
 
     <LinkWrapper>
         <NavBarLink href="www.google.pl" >Demo</NavBarLink>
