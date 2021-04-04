@@ -36,7 +36,8 @@ const NavBar = () => (
     </div>
 
     <LinkWrapper>
-        <NavBarLink href="www.google.pl" >Demo</NavBarLink>
+        <NavBarLink href="www.google.pl" >Demo 2</NavBarLink>
+        <NavBarLink active href="www.google.pl" >Demo</NavBarLink>
         <NavBarLink href="">Dupa</NavBarLink>
     </LinkWrapper>
 
