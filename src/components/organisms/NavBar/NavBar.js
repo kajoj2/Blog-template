@@ -12,7 +12,7 @@ const BarWrapper = styled.div`
   justify-content: space-between;
   column-gap: 20px;
   margin: auto;
-  padding: 0 10px;
+  padding: 0 2%;
   justify-items: stretch;
 `
 const LogoWrapper = styled.div`
@@ -36,9 +36,9 @@ const NavBar = () => (
     </div>
 
     <LinkWrapper>
-        <NavBarLink href="www.google.pl" >Demo 2</NavBarLink>
-        <NavBarLink active href="www.google.pl" >Demo</NavBarLink>
-        <NavBarLink href="">Dupa</NavBarLink>
+        <NavBarLink to={"/blog"}>Blog</NavBarLink>
+        <NavBarLink to={"/about"}>About</NavBarLink>
+        <NavBarLink to={"/"}>Contact</NavBarLink>
     </LinkWrapper>
 
 </BarWrapper>

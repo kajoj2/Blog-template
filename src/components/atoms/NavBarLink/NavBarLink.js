@@ -1,6 +1,8 @@
 import styled from "styled-components";
+import { Link } from 'gatsby'
 
-const NavBarLink = styled.a`
+
+const NavBarLink = styled(Link)`
     font-size: 1em;
   color: ${props => props.active ? "#218380": "black"};
   font-weight: bold;
