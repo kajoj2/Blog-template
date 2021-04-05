@@ -7,6 +7,6 @@ export default {
     component: BlogPostTitle
 };
 
-const Template = () => <BlogPostTitle/>;
+const Template = () => <BlogPostTitle>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ullamcorper id risus ut venenatis </BlogPostTitle>;
 
 export const BlogPostTitleExample = Template.bind({});

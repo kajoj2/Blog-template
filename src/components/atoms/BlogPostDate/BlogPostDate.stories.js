@@ -7,6 +7,6 @@ export default {
     component: BlogPostDate
 };
 
-const Template = () => <BlogPostDate/>;
+const Template = () => <BlogPostDate> 20 September 2020 </BlogPostDate>;
 
 export const BlogPostDateExample = Template.bind({});

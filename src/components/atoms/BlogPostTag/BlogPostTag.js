@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const LogoStyle = styled.p`
+const BlogPostTag = styled.p`
   font-family: Roboto,serif;
   background: transparent;
   font-weight: 600;
@@ -10,7 +10,5 @@ const LogoStyle = styled.p`
   text-transform: uppercase;
   text-decoration: underline;
 `
-
-const BlogPostTag = () => <LogoStyle>Linux </LogoStyle>
 
 export default BlogPostTag

@@ -10,7 +10,7 @@ import NavBar from "../components/organisms/NavBar/NavBar";
 const MainLayout = ({children}) =>(
     <ThemeProvider theme={theme}>
         <>
-            {/*<NavBar/>*/}
+            <NavBar/>
             <GlobalStyle/>
             {children}
             </>

@@ -7,6 +7,6 @@ export default {
     component: BlogPostTag
 };
 
-const Template = () => <BlogPostTag/>;
+const Template = () => <BlogPostTag>#LINUX </BlogPostTag>;
 
 export const BlogPostTagExample = Template.bind({});

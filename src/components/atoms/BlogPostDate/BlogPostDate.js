@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const LogoStyle = styled.p`
+const BlogPostDate = styled.p`
   font-family: Roboto,serif;
   background: transparent;
   font-weight: 600;
@@ -10,6 +10,5 @@ const LogoStyle = styled.p`
   text-transform: uppercase;
 `
 
-const BlogPostDate = () => <LogoStyle>20 SEPTEMBER 2021 </LogoStyle>
 
 export default BlogPostDate

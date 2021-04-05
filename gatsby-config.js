@@ -37,6 +37,19 @@ module.exports = {
         path: "./src/pages/",
       },
       __key: "pages",
+    },{
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "blog_posts",
+        path: "./data/blog_posts",
+      },
+    },{
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "images",
+        path: "./data/images",
+      },
     },
+    `gatsby-transformer-remark`,
   ],
 };
