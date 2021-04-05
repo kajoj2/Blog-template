@@ -9,4 +9,4 @@ export default {
 
 const Template = () => <BlogPostDate/>;
 
-export const BlogPostTitleExample = Template.bind({});
+export const BlogPostDateExample = Template.bind({});
