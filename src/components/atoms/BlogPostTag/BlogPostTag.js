@@ -9,6 +9,7 @@ const BlogPostTag = styled.p`
   color: #ED7D3A;
   text-transform: uppercase;
   text-decoration: underline;
+  margin: 0;
 `
 
 export default BlogPostTag

@@ -8,6 +8,7 @@ const BlogPostDate = styled.p`
   font-size: 0.875rem;
   color: #7261A3;
   text-transform: uppercase;
+  margin: 0;
 `
 
 

@@ -7,6 +7,7 @@ const BlogPostTitle = styled.p`
   font-weight: 600;
   font-size: 2rem;
   color: black;
+  margin: 0;
 `
 
 export default BlogPostTitle

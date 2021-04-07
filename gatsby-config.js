@@ -21,6 +21,7 @@ module.exports = {
     },
     "gatsby-plugin-mdx",
     "gatsby-plugin-sharp",
+    `gatsby-transformer-remark`,
     "gatsby-transformer-sharp",
     {
       resolve: "gatsby-source-filesystem",
@@ -46,10 +47,12 @@ module.exports = {
     },{
       resolve: "gatsby-source-filesystem",
       options: {
-        name: "images",
-        path: "./data/images",
+        name: "blog_images",
+        path: "./data/images/",
       },
     },
-    `gatsby-transformer-remark`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+
   ],
 };
