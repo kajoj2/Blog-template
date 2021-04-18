@@ -3,6 +3,7 @@ import styled, { ThemeProvider } from 'styled-components';
 import GlobalStyle from "./globalStyle";
 import {theme} from "./theme";
 import "@fontsource/lato"
+import '@fontsource/roboto'
 import NavBar from "../components/organisms/NavBar/NavBar";
 
 

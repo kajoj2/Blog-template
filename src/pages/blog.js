@@ -1,6 +1,6 @@
 import * as React from "react"
 import MainLayout from "../Layout/main";
-import {graphql} from "gatsby"
+import {graphql, Link} from "gatsby"
 import styled from "styled-components";
 import BlogPostTitle from "../components/atoms/BlogPostTitle/BlogPostTitle";
 import BlogPostDate from "../components/atoms/BlogPostDate/BlogPostDate";
@@ -35,7 +35,7 @@ const BlogPreviewListWrapper = styled.div`
 `
 const BlogPreviewWrapper = styled.div`
   display: grid;
-  padding: 1vw 0;
+  padding: 30px 0;
   grid-template-columns: 1.6fr 1fr;
   grid-template-areas:
   "date image"
@@ -79,6 +79,16 @@ const ImageWrapper = styled.div`
   align-self: center;
   grid-area: image;
 `
+const ReadBlogPostWrapper = styled.div`
+  grid-column-start: 1;
+  grid-column-end: 3;
+  justify-self: center;
+
+`
+const ReadMoreButton = styled(Link)`
+  color: black;
+  font-size: 1.3em;
+`
 
 
 const BlogPage = ({data}) => {
@@ -112,13 +122,17 @@ const BlogPage = ({data}) => {
                                             </TagListWrapper>
                                             <PreviewTextWrapper>
 
-                                                    {element.node.frontmatter.previewText}
+                                                {element.node.frontmatter.previewText}
 
                                             </PreviewTextWrapper>
                                             <ImageWrapper>
-                                                <GatsbyImage  image={image} alt={"test"}/>
+                                                <GatsbyImage image={image} alt={"test"}/>
                                             </ImageWrapper>
+                                            <ReadBlogPostWrapper>
+                                                <ReadMoreButton to="/blog">Read More -></ReadMoreButton>!
+                                            </ReadBlogPostWrapper>
                                         </BlogPreviewWrapper>
+
 
                                     </>
                                 )
@@ -152,7 +166,6 @@ export const query = graphql`
             }
           }
         }
-        body
       }
     }
   }
