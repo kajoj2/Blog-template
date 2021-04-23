@@ -1,8 +1,7 @@
-import React from 'react'
 import styled from 'styled-components'
 
 const BlogPostDate = styled.p`
-  font-family: Roboto,serif;
+  font-family: Roboto, serif;
   background: transparent;
   font-weight: 600;
   font-size: 0.875rem;

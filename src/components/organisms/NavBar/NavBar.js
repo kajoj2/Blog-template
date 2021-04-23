@@ -26,22 +26,22 @@ const LinkWrapper = styled.div`
 `
 
 const NavBar = () => (
-<BarWrapper>
+    <BarWrapper>
 
-    <LogoWrapper>
-        <Logo/>
-    </LogoWrapper>
-    <div>
+        <LogoWrapper>
+            <Logo/>
+        </LogoWrapper>
+        <div>
 
-    </div>
+        </div>
 
-    <LinkWrapper>
-        <NavBarLink to={"/blog"}>Blog</NavBarLink>
-        <NavBarLink to={"/about"}>About</NavBarLink>
-        <NavBarLink to={"/"}>Contact</NavBarLink>
-    </LinkWrapper>
+        <LinkWrapper>
+            <NavBarLink to={"/blog"}>Blog</NavBarLink>
+            <NavBarLink to={"/about"}>About</NavBarLink>
+            <NavBarLink to={"/"}>Contact</NavBarLink>
+        </LinkWrapper>
 
-</BarWrapper>
+    </BarWrapper>
 )
 
 export default NavBar

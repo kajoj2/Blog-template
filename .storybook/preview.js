@@ -28,8 +28,8 @@ export const parameters = {
 export const decorators = [
     (Story) => (
         <>
-        <GlobalStyle/>
-        <Story />
+            <GlobalStyle/>
+            <Story/>
         </>
     ),
 ];

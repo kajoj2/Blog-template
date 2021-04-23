@@ -9,6 +9,6 @@ const LogoStyle = styled.a`
   text-decoration: none;
 `
 
-const Logo = () => <LogoStyle href={"/"}  >FURWERS</LogoStyle>
+const Logo = () => <LogoStyle href={"/"}>FURWERS</LogoStyle>
 
 export default Logo

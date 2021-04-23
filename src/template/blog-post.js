@@ -1,9 +1,8 @@
 import React from "react"
-import { graphql } from "gatsby"
+import {graphql} from "gatsby"
 
 
-
-export default function BlogPost({ data }) {
+export default function BlogPost({data}) {
     const post = data.mdx
     return (
         <>
