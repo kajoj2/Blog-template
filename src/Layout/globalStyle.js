@@ -6,7 +6,7 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     margin: 0;
     font-family: Lato,"-apple-system",Roboto, sans-serif,serif;
-    color: white;
+    background-color: white;
   }
   
   *, *::before, *::after {

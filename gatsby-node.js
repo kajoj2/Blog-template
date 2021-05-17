@@ -15,10 +15,10 @@ exports.createPages = async ({graphql, actions}) => {
           }
     }
   `)
-    console.log(JSON.stringify(result, null, 4))
+    //console.log(JSON.stringify(result, null, 4))
     result.data.allMdx.edges.forEach(({node}) => {
         createPage({
-            path: node.slug,
+            path: "blog/"+ node.slug,
             component: path.resolve(`./src/template/blog-post.js`),
             context: {
                 // Data passed to context is available
