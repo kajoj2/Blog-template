@@ -104,8 +104,8 @@ const BlogPage = ({data}) => {
                                 console.log(element)
                                 const image = getImage(element.node.frontmatter.featuredImage)
                                 return (
-                                    <>
-                                        <BlogPreviewWrapper>
+
+                                        <BlogPreviewWrapper key={element.node.id} >
                                             <DateWrapper>
                                                 <BlogPostDate> {moment(element.node.frontmatter.date).format("D MMMM YYYY")} </BlogPostDate>
                                             </DateWrapper>
@@ -114,9 +114,9 @@ const BlogPage = ({data}) => {
                                             </TitleWrapper>
                                             <TagListWrapper>
                                                 {element.node.frontmatter.tags.map(tag => {
-                                                    return (<>
+                                                    return (<div key={tag}>
                                                             <BlogPostTag>#{tag} </BlogPostTag>&nbsp;
-                                                        </>
+                                                        </div>
                                                     )
                                                 })}
                                             </TagListWrapper>
@@ -129,12 +129,12 @@ const BlogPage = ({data}) => {
                                                 <GatsbyImage image={image} alt={"test"}/>
                                             </ImageWrapper>
                                             <ReadBlogPostWrapper>
-                                                <ReadMoreButton to="/blog">Read More -></ReadMoreButton>!
+                                                <ReadMoreButton to={`/blog/${element.node.slug}`}>Read More -></ReadMoreButton>!
                                             </ReadBlogPostWrapper>
                                         </BlogPreviewWrapper>
 
 
-                                    </>
+
                                 )
 
 
@@ -154,6 +154,7 @@ export const query = graphql`
     edges {
       node {
         id
+        slug
         frontmatter {
           path
           title

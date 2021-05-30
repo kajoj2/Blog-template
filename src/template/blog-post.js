@@ -46,7 +46,6 @@ const TextWrapper = styled.div`
 `
 
 export default function BlogPost({data}) {
-    console.log(data)
     const post = data.mdx
     const image = getImage(post.frontmatter.featuredImage)
     return (
@@ -67,9 +66,11 @@ export default function BlogPost({data}) {
                             </TitleWrapper>
                             <TagListWrapper>
                                 {post.frontmatter.tags.map(tag => {
-                                    return (<>
-                                            <BlogPostTag>#{tag} </BlogPostTag>&nbsp;
-                                        </>
+                                    return (<div key={tag}>
+                                            <span>
+                                                <BlogPostTag>#{tag} </BlogPostTag >&nbsp;
+                                            </span>
+                                        </div>
                                     )
                                 })}
                             </TagListWrapper>
