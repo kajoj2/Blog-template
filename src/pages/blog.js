@@ -45,7 +45,7 @@ const BlogPreviewWrapper = styled.div`
   column-gap: 10px;
   row-gap: 5px;
   @media (max-width: 768px) {
-    
+
     grid-template-columns: 1fr;
     grid-template-areas:
   "date"
@@ -57,7 +57,7 @@ const BlogPreviewWrapper = styled.div`
   border-bottom-style: solid;
   border-bottom-color: #F3F3F3;
   border-bottom-width: 2px;
-  
+
 `
 
 const DateWrapper = styled.div`
@@ -101,38 +101,37 @@ const BlogPage = ({data}) => {
                     <CenterDiv>
                         <BlogPreviewListWrapper>
                             {data.allMdx.edges.map(element => {
-                                console.log(element)
                                 const image = getImage(element.node.frontmatter.featuredImage)
                                 return (
 
-                                        <BlogPreviewWrapper key={element.node.id} >
-                                            <DateWrapper>
-                                                <BlogPostDate> {moment(element.node.frontmatter.date).format("D MMMM YYYY")} </BlogPostDate>
-                                            </DateWrapper>
-                                            <TitleWrapper>
-                                                <BlogPostTitle> {element.node.frontmatter.title} </BlogPostTitle>
-                                            </TitleWrapper>
-                                            <TagListWrapper>
-                                                {element.node.frontmatter.tags.map(tag => {
-                                                    return (<div key={tag}>
-                                                            <BlogPostTag>#{tag} </BlogPostTag>&nbsp;
-                                                        </div>
-                                                    )
-                                                })}
-                                            </TagListWrapper>
-                                            <PreviewTextWrapper>
+                                    <BlogPreviewWrapper key={element.node.id}>
+                                        <DateWrapper>
+                                            <BlogPostDate> {moment(element.node.frontmatter.date).format("D MMMM YYYY")} </BlogPostDate>
+                                        </DateWrapper>
+                                        <TitleWrapper>
+                                            <BlogPostTitle> {element.node.frontmatter.title} </BlogPostTitle>
+                                        </TitleWrapper>
+                                        <TagListWrapper>
+                                            {element.node.frontmatter.tags.map(tag => {
+                                                return (<div key={tag}>
+                                                        <BlogPostTag>#{tag} </BlogPostTag>&nbsp;
+                                                    </div>
+                                                )
+                                            })}
+                                        </TagListWrapper>
+                                        <PreviewTextWrapper>
 
-                                                {element.node.frontmatter.previewText}
+                                            {element.node.frontmatter.previewText}
 
-                                            </PreviewTextWrapper>
-                                            <ImageWrapper>
-                                                <GatsbyImage image={image} alt={"test"}/>
-                                            </ImageWrapper>
-                                            <ReadBlogPostWrapper>
-                                                <ReadMoreButton to={`/blog/${element.node.slug}`}>Read More -></ReadMoreButton>!
-                                            </ReadBlogPostWrapper>
-                                        </BlogPreviewWrapper>
-
+                                        </PreviewTextWrapper>
+                                        <ImageWrapper>
+                                            <GatsbyImage image={image} alt={"test"}/>
+                                        </ImageWrapper>
+                                        <ReadBlogPostWrapper>
+                                            <ReadMoreButton to={`/blog/${element.node.slug}`}>Read More
+                                                -></ReadMoreButton>!
+                                        </ReadBlogPostWrapper>
+                                    </BlogPreviewWrapper>
 
 
                                 )

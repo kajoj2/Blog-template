@@ -8,7 +8,7 @@ import BlogPostDate from "../components/atoms/BlogPostDate/BlogPostDate";
 import moment from "moment";
 import BlogPostTitle from "../components/atoms/BlogPostTitle/BlogPostTitle";
 import BlogPostTag from "../components/atoms/BlogPostTag/BlogPostTag";
-import { MDXRenderer } from "gatsby-plugin-mdx"
+import {MDXRenderer} from "gatsby-plugin-mdx"
 
 
 const ImageWrapper = styled.div`
@@ -38,7 +38,7 @@ const TagListWrapper = styled.div`
 
 const BlogHeaderWrapper = styled.div`
   padding: 0px;
-  width: 100vw;     
+  width: 100vw;
 `
 
 const TextWrapper = styled.div`
@@ -51,36 +51,36 @@ export default function BlogPost({data}) {
     return (
         <MainLayout>
             <main>
-            <div>
-                <ImageWrapper>
-                    <GatsbyImage  className="imageStyle" image={image} alt={"test"}/>
-                </ImageWrapper>
-                <CenterDiv>
-                    <BodyWrapper>
-                        <BlogHeaderWrapper>
-                            <DateWrapper>
-                                <BlogPostDate> {moment(post.frontmatter.date).format("D MMMM YYYY")} </BlogPostDate>
-                            </DateWrapper>
-                            <TitleWrapper>
-                                <BlogPostTitle> {post.frontmatter.title} </BlogPostTitle>
-                            </TitleWrapper>
-                            <TagListWrapper>
-                                {post.frontmatter.tags.map(tag => {
-                                    return (<div key={tag}>
+                <div>
+                    <ImageWrapper>
+                        <GatsbyImage className="imageStyle" image={image} alt={"test"}/>
+                    </ImageWrapper>
+                    <CenterDiv>
+                        <BodyWrapper>
+                            <BlogHeaderWrapper>
+                                <DateWrapper>
+                                    <BlogPostDate> {moment(post.frontmatter.date).format("D MMMM YYYY")} </BlogPostDate>
+                                </DateWrapper>
+                                <TitleWrapper>
+                                    <BlogPostTitle> {post.frontmatter.title} </BlogPostTitle>
+                                </TitleWrapper>
+                                <TagListWrapper>
+                                    {post.frontmatter.tags.map(tag => {
+                                        return (<div key={tag}>
                                             <span>
-                                                <BlogPostTag>#{tag} </BlogPostTag >&nbsp;
+                                                <BlogPostTag>#{tag} </BlogPostTag>&nbsp;
                                             </span>
-                                        </div>
-                                    )
-                                })}
-                            </TagListWrapper>
-                        </BlogHeaderWrapper>
-                        <TextWrapper>
-                            <MDXRenderer>{post.body}</MDXRenderer>
-                        </TextWrapper>
-                    </BodyWrapper>
-                </CenterDiv>
-            </div>
+                                            </div>
+                                        )
+                                    })}
+                                </TagListWrapper>
+                            </BlogHeaderWrapper>
+                            <TextWrapper>
+                                <MDXRenderer>{post.body}</MDXRenderer>
+                            </TextWrapper>
+                        </BodyWrapper>
+                    </CenterDiv>
+                </div>
             </main>
         </MainLayout>
     )
