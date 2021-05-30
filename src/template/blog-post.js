@@ -8,6 +8,8 @@ import BlogPostDate from "../components/atoms/BlogPostDate/BlogPostDate";
 import moment from "moment";
 import BlogPostTitle from "../components/atoms/BlogPostTitle/BlogPostTitle";
 import BlogPostTag from "../components/atoms/BlogPostTag/BlogPostTag";
+import { MDXRenderer } from "gatsby-plugin-mdx"
+
 
 const ImageWrapper = styled.div`
   width: 100%;
@@ -19,26 +21,32 @@ const CenterDiv = styled.div`
 `
 
 const BodyWrapper = styled.div`
+  padding-top: 20px;
   max-width: 1080px;
 `
 const DateWrapper = styled.div`
   grid-area: date;
 `
 const TitleWrapper = styled.div`
-  padding-right: 10px;
+  padding: 5px 0px 5px 5px;
   grid-area: title;
 `
 const TagListWrapper = styled.div`
   display: flex;
   grid-area: tagList;
 `
-const PreviewTextWrapper = styled.div`
-  color: #000;
-  grid-area: previewText;
+
+const BlogHeaderWrapper = styled.div`
+  padding: 0px;
+  width: 100vw;     
 `
 
+const TextWrapper = styled.div`
+  padding: 0px;
+`
 
 export default function BlogPost({data}) {
+    console.log(data)
     const post = data.mdx
     const image = getImage(post.frontmatter.featuredImage)
     return (
@@ -49,22 +57,27 @@ export default function BlogPost({data}) {
                     <GatsbyImage  className="imageStyle" image={image} alt={"test"}/>
                 </ImageWrapper>
                 <CenterDiv>
-                <BodyWrapper>
-                    <DateWrapper>
-                        <BlogPostDate> {moment(post.frontmatter.date).format("D MMMM YYYY")} </BlogPostDate>
-                    </DateWrapper>
-                    <TitleWrapper>
-                        <BlogPostTitle> {post.frontmatter.title} </BlogPostTitle>
-                    </TitleWrapper>
-                    <TagListWrapper>
-                        {post.frontmatter.tags.map(tag => {
-                            return (<>
-                                    <BlogPostTag>#{tag} </BlogPostTag>&nbsp;
-                                </>
-                            )
-                        })}
-                    </TagListWrapper>
-                </BodyWrapper>
+                    <BodyWrapper>
+                        <BlogHeaderWrapper>
+                            <DateWrapper>
+                                <BlogPostDate> {moment(post.frontmatter.date).format("D MMMM YYYY")} </BlogPostDate>
+                            </DateWrapper>
+                            <TitleWrapper>
+                                <BlogPostTitle> {post.frontmatter.title} </BlogPostTitle>
+                            </TitleWrapper>
+                            <TagListWrapper>
+                                {post.frontmatter.tags.map(tag => {
+                                    return (<>
+                                            <BlogPostTag>#{tag} </BlogPostTag>&nbsp;
+                                        </>
+                                    )
+                                })}
+                            </TagListWrapper>
+                        </BlogHeaderWrapper>
+                        <TextWrapper>
+                            <MDXRenderer>{post.body}</MDXRenderer>
+                        </TextWrapper>
+                    </BodyWrapper>
                 </CenterDiv>
             </div>
             </main>
@@ -74,12 +87,14 @@ export default function BlogPost({data}) {
 export const query = graphql`
   query($slug: String!) {
       mdx(slug: {eq: $slug}) {
+        body
         frontmatter {
           path
           date
           previewText
           title
           tags
+          
           featuredImage {
             childImageSharp {
               gatsbyImageData(width: 3000, placeholder: BLURRED,sizes: "100% , 400hv", formats: [AUTO, WEBP, AVIF])
