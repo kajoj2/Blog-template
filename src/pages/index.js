@@ -1,60 +1,111 @@
 import * as React from "react"
 import MainLayout from "../Layout/main"
+import styled from "styled-components";
+import { StaticImage } from "gatsby-plugin-image"
 
 
-// styles
-const pageStyles = {
-    color: "#232129",
-    padding: 96,
 
-}
-const headingStyles = {
-    marginTop: 0,
-    marginBottom: 64,
-    maxWidth: 320,
-}
-const headingAccentStyles = {
-    color: "#663399",
-}
-const paragraphStyles = {
-    marginBottom: 48,
-}
-const codeStyles = {
-    color: "#8A6534",
-    padding: 4,
-    backgroundColor: "#FFF4DB",
-    fontSize: "1.25rem",
-    borderRadius: 4,
-}
+const Wrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+`
 
-// markup
+const Title = styled.h1`
+  font-size: 2.5rem;
+  text-align: center;
+  font-weight: normal;
+`
+
+const BoldTitle = styled(Title)`
+  font-weight: bold;
+`
+const Text = styled.p`
+
+  font-size: 1.25rem;
+  text-align: center;
+`
+
+const PurpleText = styled.span`
+  display: inline;
+  color: #7261A3;
+`
+
+const GreenText = styled.span`
+  display: inline;
+  color: #218380;
+`
+
+const RedText = styled.span`
+  display: inline;
+  color: #D72638;
+`
+
+const HeadLineWrapper = styled.div`
+  padding: 25px;
+  justify-content: center;
+`
+
+const FreeSpace = styled.div`
+  height: 200px;
+`
+
+const CenterWrapper = styled.div`
+  padding: 25px;
+  justify-content: center;
+`
+
+const DoubleWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+
+  @media(max-width: 768px) {
+    flex-direction: column;
+  }
+`
+
+const ImgWrapper = styled.div`
+max-width: 90vw;
+`
+
 const IndexPage = () => {
     return (
 
         <MainLayout>
-            <main style={pageStyles}>
+            <Wrapper>
+                <HeadLineWrapper>
+                    <BoldTitle> Electronic, IoT, Cloud </BoldTitle>
+                    <Text> Make <PurpleText>things </PurpleText> that sends data to the <GreenText>Cloud </GreenText> and view this data everywhere.</Text>
+                </HeadLineWrapper>
+                <FreeSpace/>
+                <CenterWrapper>
+                    <Title> Now it’s only blog </Title>
+                    <Text> We have big plans but to realize it we must create many things.  </Text>
+                    <Text>We want to start with the most important thing, build  <RedText>community</RedText>.  </Text>
+                    <Text>Home Page is the most important page of the website bla bla bla maybe it is but for now, it looks like this why?</Text>
+                    <Text>An answer is pretty simple: We (Now it’s only me) want to focus on create content to make useful content for you.</Text>
+                </CenterWrapper>
+                <FreeSpace/>
+                <DoubleWrapper>
+                    <ImgWrapper>
+                    <StaticImage src="../../data/images/main_page_sensor.png"    alt="A dinosaur"
+                           placeholder="blurred"
+                           layout="constrained"
+                           />
+                    </ImgWrapper>
+                    <CenterWrapper>
+                        <Title> Make Smart Things</Title>
+                        <Text> We are in the XXI century on a level where every device can be connected to the internet. </Text>
+                        <Text> But these things are hard to use, not easy to configure and data from them are useless.</Text>
+                        <Text> So we will try to change this by making smart things.</Text>
+                    </CenterWrapper>
+                </DoubleWrapper>
 
-                <title>Home Page</title>
-                <h1 style={headingStyles}>
-                    Under the construction
-                    <br/>
-                    <span
-                        style={headingAccentStyles}>— yet aganin but this time I will post my progress in my vlog </span>
-                    <span role="img" aria-label="Party popper emojis">
-          🎉🎉🎉
-        </span>
-                </h1>
-                <p style={paragraphStyles}>
-                    See my github <code style={codeStyles}>@kajoj2</code> to see my work in real time.
-                    <span role="img" aria-label="Sunglasses smiley emoji">
-          😎
-        </span>
-                </p>
-                <img
-                    alt="Gatsby G Logo"
-                    src="data:image/svg+xml,%3Csvg width='24' height='24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 2a10 10 0 110 20 10 10 0 010-20zm0 2c-3.73 0-6.86 2.55-7.75 6L14 19.75c3.45-.89 6-4.02 6-7.75h-5.25v1.5h3.45a6.37 6.37 0 01-3.89 4.44L6.06 9.69C7 7.31 9.3 5.63 12 5.63c2.13 0 4 1.04 5.18 2.65l1.23-1.06A7.959 7.959 0 0012 4zm-8 8a8 8 0 008 8c.04 0 .09 0-8-8z' fill='%23639'/%3E%3C/svg%3E"
-                />
-            </main>
+            </Wrapper>
+
         </MainLayout>
 
     )
