@@ -7,6 +7,10 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     font-family: Lato,"-apple-system",Roboto, sans-serif,serif;
     background-color: white;
+    height: 100%;
+  }
+  html{
+    height: 100%;
   }
   
   *, *::before, *::after {

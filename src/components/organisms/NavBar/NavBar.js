@@ -37,7 +37,7 @@ const NavBar = () => (
 
         <LinkWrapper>
             <NavBarLink to={"/blog"}>Blog</NavBarLink>
-            <NavBarLink to={"/"}>Contact</NavBarLink>
+            <NavBarLink to={"/contact"}>Contact</NavBarLink>
         </LinkWrapper>
 
     </BarWrapper>
