@@ -128,7 +128,7 @@ const BlogPage = ({data}) => {
                                             <GatsbyImage image={image} alt={"test"}/>
                                         </ImageWrapper>
                                         <ReadBlogPostWrapper>
-                                            <ReadMoreButton to={`/blog/${element.node.slug}`}>Read More
+                                            <ReadMoreButton to={`/blog${element.node.frontmatter.path}`}>Read More
                                                 -></ReadMoreButton>!
                                         </ReadBlogPostWrapper>
                                     </BlogPreviewWrapper>
