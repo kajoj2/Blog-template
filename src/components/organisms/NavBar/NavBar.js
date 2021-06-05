@@ -17,7 +17,7 @@ const BarWrapper = styled.div`
 `
 const LogoWrapper = styled.div`
   margin: auto 0;
- 
+
 `
 const LinkWrapper = styled.div`
   margin: auto 0;

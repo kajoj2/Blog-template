@@ -1,7 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import Logo from "../../atoms/Logo/Logo";
-import NavBarLink from "../../atoms/NavBarLink/NavBarLink";
 
 const FooterWrapper = styled.div`
   height: 70px;
@@ -11,7 +9,7 @@ const FooterWrapper = styled.div`
   padding: 0 2%;
   align-items: center;
   justify-content: center;
-  
+
 `
 
 const Text = styled.p`
@@ -21,7 +19,7 @@ const Text = styled.p`
 
 const FooterBar = () => (
     <FooterWrapper>
-        <Text>Make with ♡  by @kajoj  </Text>
+        <Text>Make with ♡ by @kajoj </Text>
     </FooterWrapper>
 )
 

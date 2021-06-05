@@ -1,8 +1,7 @@
 import * as React from "react"
 import MainLayout from "../Layout/main"
 import styled from "styled-components";
-import { StaticImage } from "gatsby-plugin-image"
-
+import {StaticImage} from "gatsby-plugin-image"
 
 
 const Wrapper = styled.div`
@@ -62,13 +61,13 @@ const DoubleWrapper = styled.div`
   justify-content: center;
   padding: 20px;
 
-  @media(max-width: 768px) {
+  @media (max-width: 768px) {
     flex-direction: column;
   }
 `
 
 const ImgWrapper = styled.div`
-max-width: 90vw;
+  max-width: 90vw;
 `
 
 const IndexPage = () => {
@@ -78,28 +77,33 @@ const IndexPage = () => {
             <Wrapper>
                 <HeadLineWrapper>
                     <BoldTitle> Electronic, IoT, Cloud </BoldTitle>
-                    <Text> Make <PurpleText>things </PurpleText> that sends data to the <GreenText>Cloud </GreenText> and view this data everywhere.</Text>
+                    <Text> Make <PurpleText>things </PurpleText> that sends data to
+                        the <GreenText>Cloud </GreenText> and view this data everywhere.</Text>
                 </HeadLineWrapper>
                 <FreeSpace/>
                 <CenterWrapper>
                     <Title> Now it’s only blog </Title>
-                    <Text> We have big plans but to realize it we must create many things.  </Text>
-                    <Text>We want to start with the most important thing, build  <RedText>community</RedText>.  </Text>
-                    <Text>Home Page is the most important page of the website bla bla bla maybe it is but for now, it looks like this why?</Text>
-                    <Text>An answer is pretty simple: We (Now it’s only me) want to focus on create content to make useful content for you.</Text>
+                    <Text> We have big plans but to realize it we must create many things. </Text>
+                    <Text>We want to start with the most important thing, build <RedText>community</RedText>. </Text>
+                    <Text>Home Page is the most important page of the website bla bla bla maybe it is but for now, it
+                        looks like this why?</Text>
+                    <Text>An answer is pretty simple: We (Now it’s only me) want to focus on create content to make
+                        useful content for you.</Text>
                 </CenterWrapper>
                 <FreeSpace/>
                 <DoubleWrapper>
                     <ImgWrapper>
-                    <StaticImage src="../../data/images/main_page_sensor.png"    alt="A dinosaur"
-                           placeholder="blurred"
-                           layout="constrained"
-                           />
+                        <StaticImage src="../../data/images/main_page_sensor.png" alt="A dinosaur"
+                                     placeholder="blurred"
+                                     layout="constrained"
+                        />
                     </ImgWrapper>
                     <CenterWrapper>
                         <Title> Make Smart Things</Title>
-                        <Text> We are in the XXI century on a level where every device can be connected to the internet. </Text>
-                        <Text> But these things are hard to use, not easy to configure and data from them are useless.</Text>
+                        <Text> We are in the XXI century on a level where every device can be connected to the
+                            internet. </Text>
+                        <Text> But these things are hard to use, not easy to configure and data from them are
+                            useless.</Text>
                         <Text> So we will try to change this by making smart things.</Text>
                     </CenterWrapper>
                 </DoubleWrapper>
