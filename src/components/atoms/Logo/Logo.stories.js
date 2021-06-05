@@ -1,12 +1,12 @@
 import React from 'react';
 
-import {Logo} from './Logo';
+import Logo from './Logo';
 
 export default {
-    title: 'Logo',
+    title: 'Components/Logo',
     component: Logo
 };
 
-const Template = () => <Logo>TEST </Logo>;
+const Template = () => <Logo/>;
 
 export const LogoExample = Template.bind({});

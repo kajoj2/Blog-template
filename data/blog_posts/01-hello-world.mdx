@@ -1,0 +1,26 @@
+---
+title: Hello, world!
+path: /hello-world
+date: 2021-06-05
+tags: ["INFO"]
+previewText: Donec vitae libero suscipit, aliquam neque a, volutpat tortor. Suspendisse potenti. Integer lorem dolor, iaculis a dui et, eleifend pulvinar nibh. Nullam porta malesuada turpis, sit amet aliquam massa tincidunt in. Duis feugiat orci id lorem interdum, eu tempus augue ultricies. Nullam eu ultricies ante. Phasellus et risus pharetra sapien pulvinar consectetur. Donec eu dui id dolor sagittis scelerisque. Suspendisse diam massa, ullamcorper molestie tortor eget, tincidunt rhoncus mi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Integer eleifend nec ex sed vehicula. Nulla egestas semper lectus mattis sollicitudin. In venenatis massa purus, sed porta nisl commodo eu. Nullam gravida tellus eu eleifend dapibus.
+featuredImage: ../images/posts/01_Promo.jpg
+---
+# Hello World - first blog post
+
+This it first blogs post, so the site is live.
+
+It took me near 2 months to crate it (almost form strath), so its probably contains bugs, and it's not beautiful.
+
+**But remember: DONE IS BEATER THAN PERFECT**
+
+## Littlebit about technology stack
+
+This is fully static website.<br/>
+All blog post are concurrently written in markdownX.<br/>
+Then thanks to gatsby, some JS, CSS, HTML this site is rendered.
+
+Every marge to main branch on GitHub action is triggered, site is built then bullied assets are sent to bucket on AWS.<br/>
+Bucket is connect to the  CloudFront (CND), and it serves site. There is another layer of cache thanks to CloudFlare.<br/>
+Thanks to that bill on AWS is even lower (Now it is 0$ because amount of traffic is not high, and it fits in free tier limits).<br/>
+
