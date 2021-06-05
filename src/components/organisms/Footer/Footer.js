@@ -19,7 +19,7 @@ const Text = styled.p`
 
 const FooterBar = () => (
     <FooterWrapper>
-        <Text>Make with ♡ by @kajoj </Text>
+        <Text>Make with ♡ by @kajoj2 </Text>
     </FooterWrapper>
 )
 
