@@ -25,12 +25,12 @@ const ImageLink = styled.a`
 
 const FooterBar = () => (
     <FooterWrapper>
-        <ImageLink href={"https://www.instagram.com/kajoj2/"} >
-            <StaticImage  width={32} height={32} src="../../../../data/images/footer/instagram.png" alt={"instagram"}/>
+        <ImageLink href={"https://www.instagram.com/kajoj2/"}>
+            <StaticImage width={32} height={32} src="../../../../data/images/footer/instagram.png" alt={"instagram"}/>
         </ImageLink>
-        <Text>Make with ❤ by @kajoj  </Text>
-        <ImageLink href={"https://github.com/kajoj2"} >
-            <StaticImage  width={32} height={32} src="../../../../data/images/footer/github.png" alt={"github"}/>
+        <Text>Make with ❤ by @kajoj </Text>
+        <ImageLink href={"https://github.com/kajoj2"}>
+            <StaticImage width={32} height={32} src="../../../../data/images/footer/github.png" alt={"github"}/>
         </ImageLink>
     </FooterWrapper>
 )
