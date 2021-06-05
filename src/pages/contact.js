@@ -27,11 +27,12 @@ const AboutPage = () => {
                 <p style={paragraphStyles}>
                     Sorry{" "}
                     <span role="img" aria-label="Pensive emoji">
-          😔
-        </span>{" "}
-                    Here will be awesome page but not not
+                      😔
+                    </span>{" "}
+                    Here will be awesome page but not now
                     <br/>
-
+                    <br/>
+                    If you want to contact with me send me email karol@furwers.com
                 </p>
             </main>
         </MainLayout>
