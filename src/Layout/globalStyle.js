@@ -7,11 +7,11 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     font-family: Lato, "-apple-system", Roboto, sans-serif, serif;
     background-color: white;
-    height: 100%;
+    height: 100vh;
   }
 
   html {
-    height: 100%;
+    height: 100vh;
   }
 
   *, *::before, *::after {

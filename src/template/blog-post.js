@@ -21,14 +21,15 @@ const CenterDiv = styled.div`
 `
 
 const BodyWrapper = styled.div`
-  padding-top: 20px;
-  max-width: 1080px;
+  padding: 20px;
+  max-width: 1440px;
+
 `
 const DateWrapper = styled.div`
   grid-area: date;
 `
 const TitleWrapper = styled.div`
-  padding: 5px 0px 5px 5px;
+  padding: 5px 0 5px 5px;
   grid-area: title;
 `
 const TagListWrapper = styled.div`
@@ -37,12 +38,11 @@ const TagListWrapper = styled.div`
 `
 
 const BlogHeaderWrapper = styled.div`
-  padding: 0px;
-  width: 100vw;
+  padding: 0;
 `
 
 const TextWrapper = styled.div`
-  padding: 0px;
+  padding: 0;
 `
 
 export default function BlogPost({data}) {
